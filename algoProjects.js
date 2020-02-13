@@ -111,6 +111,17 @@ function rot13(str) {
 rot13("SERR CVMMN!");
 
 
+//function instructions. Return true if the passed string looks like a valid US phone number.
+function telephoneCheck(str) {
+  if (str.match(/(^1?[- ]?([(]\d{3}[)])|^1?[ -]?\d{3})[ -]?(\d{3})[ -]?(\d{4}$)/)){
+  return true;
+}
+  return false;
+}
+
+telephoneCheck("555-555-5555");
+
+
 //function instructions: Design a cash register drawer function checkCashRegister() that accepts purchase price as the first argument (price), payment as the second argument (cash), and cash-in-drawer (cid) as the third argument.
 function checkCashRegister(price, cash, cid) {
   var change = (100 * cash) - (100 * price), totalChange = 0, arr = {}, i = 0, j = 0, arr2 = [], hCount = 0, tCount = 0, tnCount = 0, fCount = 0, oCount = 0, qCount = 0, dCount = 0, nCount = 0, pCount = 0;
